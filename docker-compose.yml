@@ -1,0 +1,14 @@
+services:
+  dev:
+    image: node:20-alpine
+    user: "node"
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "npm ci || npm i && npm run dev"
