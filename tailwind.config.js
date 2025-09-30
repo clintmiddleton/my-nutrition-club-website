@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import forms from '@tailwindcss/forms'
-import typography from '@tailwindcss/typography'
-
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  // Tailwind v4: sources are configured in CSS via @source
   theme: {
     extend: {
       colors: {
@@ -16,12 +10,9 @@ export default {
           600: '#2563eb',
           700: '#1d4ed8',
           900: '#1e3a8a',
-        }
-      }
+        },
+      },
     },
   },
-  plugins: [
-    forms,
-    typography,
-  ],
+  // No plugins here; use @plugin in CSS (src/assets/main.css)
 }

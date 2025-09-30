@@ -1,4 +1,10 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+/* Tell Tailwind where to scan for classes */
+@source "./index.html";
+@source "./src/**/*.{vue,js,ts,jsx,tsx}";
+
+/* Your project base styles */
 @import './base.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
